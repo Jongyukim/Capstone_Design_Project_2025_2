@@ -236,9 +236,9 @@ class PanelSearchPipeline:
             
             logger.info(f"[검색] 랜덤 벡터 생성 완료, 카테고리: {category_order}")
         else:
-            # 3단계: 자연어 텍스트 생성 (병렬 처리)
+            # 3단계: 자연어 텍스트 생성 (순차 처리)
             step_start = time.time()
-            logger.info("[3단계] 자연어 텍스트 생성 시작 (병렬)")
+            logger.info("[3단계] 자연어 텍스트 생성 시작 (순차 처리 - 노트북과 동일)")
             texts = {}
             
             if classified:
